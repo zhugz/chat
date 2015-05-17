@@ -1,7 +1,3 @@
-git add XXX
-git commit -m "remark"
-git remote add origin git@github.com:zhugz/chat.git
-git push -u origin master
 
 创建文件夹存放项目，在文件夹里面点击右键选择“git bash”
 提交代码命令：
