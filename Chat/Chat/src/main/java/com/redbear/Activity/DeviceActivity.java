@@ -60,7 +60,7 @@ public class DeviceActivity extends Activity implements OnItemClickListener {
 		String addr = hashMap.get(DEVICE_ADDRESS);
 		String name = hashMap.get(DEVICE_NAME);
 
-		Intent intent = new Intent(DeviceActivity.this, ChatActivity.class);
+		Intent intent = new Intent(DeviceActivity.this, MainActivity.class);
 		intent.putExtra(EXTRA_DEVICE_ADDRESS, addr);
 		intent.putExtra(EXTRA_DEVICE_NAME, name);
 		startActivity(intent);
