@@ -32,4 +32,8 @@
 
     </style>
 
+    <style name="MyCheckBox" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:button">@drawable/checkbox_selector</item>
+    </style>
+
 </resources>

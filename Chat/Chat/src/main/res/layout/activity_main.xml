@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#e1e1e1"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/topicView"
+        android:text="主菜单"
+        android:textSize="38dp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/choice"
+        android:layout_alignStart="@+id/choice" />
+    <RadioGroup
+        android:id="@+id/choice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_below="@+id/topicView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="向    左"
+            android:textSize="24dp"
+            android:id="@+id/leftBtn"
+            android:checked="false"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="向    右"
+            android:textSize="24dp"
+            android:id="@+id/rightBtn"
+            android:checked="false"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="向    上"
+            android:textSize="24dp"
+            android:id="@+id/upBtn"
+            android:checked="false"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="向    下"
+            android:textSize="24dp"
+            android:id="@+id/downBtn"
+            android:checked="false"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心    形"
+            android:textSize="24dp"
+            android:id="@+id/heartBtn"
+            android:checked="false"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义"
+            android:textSize="24dp"
+            android:id="@+id/customBtn"
+            android:checked="false"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/choiceBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:background="#403d3d"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp" />
+
+
+
+
+</RelativeLayout>
