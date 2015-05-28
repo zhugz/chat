@@ -1,4 +1,4 @@
-package com.redbear.Activity;
+package com.BlueMatrix.Activity;
 
 import java.util.ArrayList;
 import java.util.List;

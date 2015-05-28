@@ -1,4 +1,4 @@
-package com.redbear.Activity;
+package com.BlueMatrix.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -59,6 +59,7 @@ public class CustomActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom);
+
         mainBtn = (Button)findViewById(R.id.mainBtn);
         resetBtn = (Button)findViewById(R.id.resetBtn);
         backBtn = (Button)findViewById(R.id.backBtn);
@@ -2275,11 +2276,6 @@ public class CustomActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }

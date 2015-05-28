@@ -1,4 +1,4 @@
-package com.redbear.Activity;
+package com.BlueMatrix.Activity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.redbear.ble.RBLService;
+import com.BlueMatrix.ble.RBLService;
 
 public class ChatActivity extends Activity {
 	private final static String TAG = ChatActivity.class.getSimpleName();

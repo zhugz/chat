@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.redbear.ble;
+package com.BlueMatrix.ble;
 
 import java.util.UUID;
 

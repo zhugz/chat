@@ -1,4 +1,4 @@
-package com.redbear.Activity;
+package com.BlueMatrix.Activity;
 
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattService;
@@ -20,8 +20,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.app.Activity;
 
-import com.redbear.ble.RBLService;
-
+import com.BlueMatrix.ble.RBLService;
+import com.BlueMatrix.ble.BlueAction;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
     private String mDeviceName;
     private String mDeviceAddress;
     private RBLService mBluetoothLeService;
-
+    private BlueAction blueAction;  //提供蓝牙操作
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +60,9 @@ public class MainActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         Intent gattServiceIntent = new Intent(this, RBLService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
+
+        //初始化蓝牙操作类
+        blueAction = new BlueAction(mBluetoothLeService);
     }
 
     @Override
@@ -125,7 +128,10 @@ public class MainActivity extends Activity {
 
             if (RBLService.ACTION_GATT_DISCONNECTED.equals(action))
             {
-
+                //连接断开，返回
+                Intent intent2 = new Intent(MainActivity.this, ScanDeviceActivity.class);
+                startActivity(intent2);
+                finish();
             }
             else if (RBLService.ACTION_GATT_SERVICES_DISCOVERED.equals(action))
             {
@@ -155,9 +161,20 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this,CustomActivity.class);
                 startActivity(intent);
-            } else if(leftBtn.getId() == selected){
+            }
+            else if(leftBtn.getId() == selected){
                 Toast.makeText(MainActivity.this,"你选择了向左",Toast.LENGTH_LONG).show();
-            }else {
+                blueAction.PatternRegularCommand(BlueAction.PATTERN_LEFT);
+            }
+             else if(rightBtn.getId() == selected){
+                Toast.makeText(MainActivity.this,"你选择了向右",Toast.LENGTH_LONG).show();
+                blueAction.PatternRegularCommand(BlueAction.PATTERN_RIGHT);
+            }
+             else if(heartBtn.getId() == selected){
+                Toast.makeText(MainActivity.this,"你选择了心图案",Toast.LENGTH_LONG).show();
+                blueAction.PatternRegularCommand(BlueAction.PATTERN_HEART);
+            }
+            else {
                 Toast.makeText(MainActivity.this,"请选择！",Toast.LENGTH_LONG).show();
             }
         }
