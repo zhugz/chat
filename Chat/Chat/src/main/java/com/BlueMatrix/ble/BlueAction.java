@@ -1,6 +1,7 @@
 package com.BlueMatrix.ble;
 
 import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattService;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,6 +39,17 @@ public class BlueAction {
             mBluetoothLeService.writeCharacteristic(characteristic);
         }
     }
+    public void getGattService(BluetoothGattService gattService)
+    {
+        BluetoothGattCharacteristic characteristic = gattService
+                .getCharacteristic(RBLService.UUID_BLE_SHIELD_TX);
+        map.put(characteristic.getUuid(), characteristic);
+
+        characteristic = gattService.getCharacteristic(
+                RBLService.UUID_BLE_SHIELD_REGULARCOMMAND);
+        map.put(characteristic.getUuid(), characteristic);
+    }
+
     //传送规则图案
     public void PatternRegularCommand(int pattern)
     {
@@ -61,7 +73,7 @@ public class BlueAction {
 //            }
 //            break;
 //        }
-        BluetoothGattCharacteristic characteristic = map.get(RBLService.UUID_BLE_SHIELD_TX);
+        BluetoothGattCharacteristic characteristic = map.get(RBLService.UUID_BLE_SHIELD_REGULARCOMMAND);
         if(characteristic != null)
         {
             characteristic.setValue(RegularPattern);

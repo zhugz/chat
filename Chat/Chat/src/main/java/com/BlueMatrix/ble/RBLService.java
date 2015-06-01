@@ -57,8 +57,10 @@ public class RBLService extends Service {
 			.fromString(RBLGattAttributes.BLE_SHIELD_TX);
 	public final static UUID UUID_BLE_SHIELD_RX = UUID
 			.fromString(RBLGattAttributes.BLE_SHIELD_RX);
-	public final static UUID UUID_BLE_SHIELD_SERVICE = UUID
-			.fromString(RBLGattAttributes.BLE_SHIELD_SERVICE);
+	public final static UUID UUID_BLE_SHIELD_REGULARCOMMAND = UUID
+			.fromString(RBLGattAttributes.BLE_SHIELD_REGULARCOMMAND);
+    public final static UUID UUID_BLE_SHIELD_SERVICE = UUID
+            .fromString(RBLGattAttributes.BLE_SHIELD_SERVICE);
 
 	private final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
 		@Override

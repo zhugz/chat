@@ -102,7 +102,8 @@ public class ChatActivity extends Activity {
                     String str = et.getText().toString();
                     byte[] tmp = str.getBytes();
 
-                    for (int i = 0; i < tmp.length; i++) {
+                    for (int i = 0; i < tmp.length; i++)
+                    {
                         mydata[i] = ByteConvertToHex(tmp[i]);
                     }
                     characteristic.setValue(mydata);

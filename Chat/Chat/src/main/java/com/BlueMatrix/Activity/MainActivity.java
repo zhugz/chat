@@ -148,9 +148,7 @@ public class MainActivity extends Activity {
         if (gattService == null)
             return;
 
-        BluetoothGattCharacteristic characteristic = gattService
-                .getCharacteristic(RBLService.UUID_BLE_SHIELD_TX);
-        map.put(characteristic.getUuid(), characteristic);
+        blueAction.getGattService(gattService);
     }
 
     private View.OnClickListener listener = new View.OnClickListener(){
