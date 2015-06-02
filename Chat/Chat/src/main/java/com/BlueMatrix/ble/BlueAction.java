@@ -45,9 +45,9 @@ public class BlueAction {
                 .getCharacteristic(RBLService.UUID_BLE_SHIELD_TX);
         map.put(characteristic.getUuid(), characteristic);
 
-        characteristic = gattService.getCharacteristic(
+        BluetoothGattCharacteristic characteristic2 = gattService.getCharacteristic(
                 RBLService.UUID_BLE_SHIELD_REGULARCOMMAND);
-        map.put(characteristic.getUuid(), characteristic);
+        map.put(characteristic2.getUuid(), characteristic2);
     }
 
     //传送规则图案

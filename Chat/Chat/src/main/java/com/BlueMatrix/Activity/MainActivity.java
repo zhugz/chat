@@ -61,8 +61,7 @@ public class MainActivity extends Activity {
         Intent gattServiceIntent = new Intent(this, RBLService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
 
-        //初始化蓝牙操作类
-        blueAction = new BlueAction(mBluetoothLeService);
+
     }
 
     @Override
@@ -113,6 +112,8 @@ public class MainActivity extends Activity {
             // Automatically connects to the device upon successful start-up
             // initialization.
             mBluetoothLeService.connect(mDeviceAddress);
+            //初始化蓝牙操作类
+            blueAction = new BlueAction(mBluetoothLeService);
         }
 
         @Override

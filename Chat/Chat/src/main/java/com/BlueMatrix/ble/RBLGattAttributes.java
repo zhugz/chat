@@ -25,10 +25,10 @@ import java.util.HashMap;
 public class RBLGattAttributes {
 	private static HashMap<String, String> attributes = new HashMap<String, String>();
 	public static String CLIENT_CHARACTERISTIC_CONFIG = "00002902-0000-1000-8000-00805f9b34fb";
-	//public static String BLE_SHIELD_TX = "713d0003-503e-4c75-ba94-3148f18d941e";
-    public static String BLE_SHIELD_REGULARCOMMAND = "0000fff2-0000-1000-8000-00805f9b34fb";
+	//public static String BLE_SHIELD_TX = "713d0003-503e-4c75-ba94-3148f18d941e"
     public static String BLE_SHIELD_TX = "0000fff1-0000-1000-8000-00805f9b34fb";
 	public static String BLE_SHIELD_RX = "0000fff1-0000-1000-8000-00805f9b34fb";
+	public static String BLE_SHIELD_REGULARCOMMAND = "0000fff2-0000-1000-8000-00805f9b34fb";
     public static String BLE_SHIELD_SERVICE = "0000fff0-0000-1000-8000-00805f9b34fb";
 	//public static String BLE_SHIELD_SERVICE = "713d0000-503e-4c75-ba94-3148f18d941e";
 
