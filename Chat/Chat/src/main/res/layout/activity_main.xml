@@ -34,6 +34,7 @@
             android:textSize="24dp"
             android:id="@+id/leftBtn"
             android:checked="false"
+            android:visibility="gone"
             />
         <RadioButton
             android:layout_width="wrap_content"
@@ -42,6 +43,7 @@
             android:textSize="24dp"
             android:id="@+id/rightBtn"
             android:checked="false"
+            android:visibility="gone"
             />
         <RadioButton
             android:layout_width="wrap_content"
@@ -50,6 +52,7 @@
             android:textSize="24dp"
             android:id="@+id/upBtn"
             android:checked="false"
+            android:visibility="gone"
             />
         <RadioButton
             android:layout_width="wrap_content"
@@ -58,14 +61,30 @@
             android:textSize="24dp"
             android:id="@+id/downBtn"
             android:checked="false"
+            android:visibility="gone"
             />
-
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小    字"
+            android:textSize="24dp"
+            android:id="@+id/smallBtn"
+            android:checked="false"
+            />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="心    形"
             android:textSize="24dp"
             android:id="@+id/heartBtn"
+            android:checked="false"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="强    字"
+            android:textSize="24dp"
+            android:id="@+id/strongBtn"
             android:checked="false"
             />
         <RadioButton

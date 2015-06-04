@@ -36,6 +36,11 @@ public class MainActivity extends Activity {
     private RadioButton heartBtn = null;
     private RadioButton customBtn = null;
 
+    //为了测试暂时添加的
+    private RadioButton smallBtn = null;
+    private RadioButton strongBtn = null;
+
+
     private String mDeviceName;
     private String mDeviceAddress;
     private RBLService mBluetoothLeService;
@@ -51,6 +56,10 @@ public class MainActivity extends Activity {
         rightBtn = (RadioButton)findViewById(R.id.rightBtn);
         heartBtn = (RadioButton)findViewById(R.id.heartBtn);
         customBtn = (RadioButton)findViewById(R.id.customBtn);
+
+        smallBtn = (RadioButton)findViewById(R.id.smallBtn);
+        strongBtn = (RadioButton)findViewById(R.id.strongBtn);
+
         choiceBtn.setOnClickListener(listener);
 
         Intent intent = getIntent();
@@ -163,16 +172,25 @@ public class MainActivity extends Activity {
             }
             else if(leftBtn.getId() == selected){
                 Toast.makeText(MainActivity.this,"你选择了向左",Toast.LENGTH_LONG).show();
-                blueAction.PatternRegularCommand(BlueAction.PATTERN_LEFT);
+               // blueAction.PatternRegularCommand(BlueAction.PATTERN_LEFT);
             }
              else if(rightBtn.getId() == selected){
                 Toast.makeText(MainActivity.this,"你选择了向右",Toast.LENGTH_LONG).show();
-                blueAction.PatternRegularCommand(BlueAction.PATTERN_RIGHT);
+               // blueAction.PatternRegularCommand(BlueAction.PATTERN_RIGHT);
             }
              else if(heartBtn.getId() == selected){
                 Toast.makeText(MainActivity.this,"你选择了心图案",Toast.LENGTH_LONG).show();
                 blueAction.PatternRegularCommand(BlueAction.PATTERN_HEART);
             }
+            else if(smallBtn.getId() == selected){
+                Toast.makeText(MainActivity.this,"你选择了小字图案",Toast.LENGTH_LONG).show();
+                blueAction.PatternRegularCommand(BlueAction.PATTERN_SMALL);
+            }
+            else if(strongBtn.getId() == selected){
+                Toast.makeText(MainActivity.this,"你选择了强字图案",Toast.LENGTH_LONG).show();
+                blueAction.PatternRegularCommand(BlueAction.PATTERN_STRONG);
+            }
+
             else {
                 Toast.makeText(MainActivity.this,"请选择！",Toast.LENGTH_LONG).show();
             }

@@ -15,10 +15,13 @@ import java.util.UUID;
 public class BlueAction {
     private Map<UUID, BluetoothGattCharacteristic> map = new HashMap<UUID, BluetoothGattCharacteristic>();
     private RBLService mBluetoothLeService;
-    public  static int PATTERN_LEFT = 0;
-    public  static int PATTERN_RIGHT = 1;
-    public  static int PATTERN_HEART = 2;
-    //private final int PATTERN_CUSTOM = 3;
+    public  static int PATTERN_SMALL = 2;
+    public  static int PATTERN_STRONG = 1;
+    public  static int PATTERN_HEART = 0;
+
+    //public  static int PATTERN_LEFT = 4;
+    //public  static int PATTERN_RIGHT = 5;
+    //private final int PATTERN_CUSTOM = 6;
     private byte CustomPattern[]={0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
             0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0};
 
