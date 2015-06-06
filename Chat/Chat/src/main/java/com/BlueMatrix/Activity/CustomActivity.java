@@ -14,7 +14,7 @@ import com.BlueMatrix.ble.BlueAction;
 
 public class CustomActivity extends Activity {
     private byte CustomPattern[]={
-            0x0,0x0,0x0,0x0,                //��һ��
+            0x0,0x0,0x0,0x0,                //��һ��
             0x0,0x0,0x0,0x0,
             0x0,0x0,0x0,0x0,
             0x0,0x0,0x0,0x0,
@@ -464,6 +464,13 @@ public class CustomActivity extends Activity {
                 chBoxL13.setChecked(false);
                 chBoxL14.setChecked(false);
 
+                byte resetByte = 0;
+                for(int i = 0;i<CustomPattern.length;i++){
+                    CustomPattern[i] = resetByte;
+                }
+                Toast.makeText(CustomActivity.this, "正在重置中...", Toast.LENGTH_LONG).show();
+                BlueAction blueAction= new BlueAction();
+                blueAction.SendCustomPattern(CustomPattern);
 				
             }
         });
@@ -537,46 +544,7 @@ public class CustomActivity extends Activity {
                 int l02 = 0;
                 int l03 = 0;
                 int l04 = 0;
-                int m00 = 0;
-                int m01 = 0;
-                int m02 = 0;
-                int m03 = 0;
-                int m04 = 0;
-                int n00 = 0;
-                int n01 = 0;
-                int n02 = 0;
-                int n03 = 0;
-                int n04 = 0;
-				int o00 = 0;
-                int o01 = 0;
-                int o02 = 0;
-                int o03 = 0;
-                int o04 = 0;
-				int p00 = 0;
-                int p01 = 0;
-                int p02 = 0;
-                int p03 = 0;
-                int p04 = 0;
-				int q00 = 0;
-                int q01 = 0;
-                int q02 = 0;
-                int q03 = 0;
-                int q04 = 0;
-				int r00 = 0;
-                int r01 = 0;
-                int r02 = 0;
-                int r03 = 0;
-                int r04 = 0;
-				int s00 = 0;
-                int s01 = 0;
-                int s02 = 0;
-                int s03 = 0;
-                int s04 = 0;
-				int t00 = 0;
-                int t01 = 0;
-                int t02 = 0;
-                int t03 = 0;
-                int t04 = 0;
+                
                 int base1 = 8;
                 int base2 = 4;
                 int base4 = 2;
@@ -1107,9 +1075,67 @@ public class CustomActivity extends Activity {
                 }
 
 
-                String a = Integer.toHexString(a00+a01);
-                //Toast.makeText(CustomActivity.this, checkVaule, Toast.LENGTH_LONG).show();
-                Toast.makeText(CustomActivity.this, a, Toast.LENGTH_LONG).show();
+                CustomPattern[0] = (byte)a00;
+                CustomPattern[1] = (byte)a01;
+                CustomPattern[2] = (byte)a02;
+                CustomPattern[3] = (byte)a03;
+
+                CustomPattern[4] = (byte)b00;
+                CustomPattern[5] = (byte)b01;
+                CustomPattern[6] = (byte)b02;
+                CustomPattern[7] = (byte)b03;
+
+                CustomPattern[8] = (byte)c00;
+                CustomPattern[9] = (byte)c01;
+                CustomPattern[10] = (byte)c02;
+                CustomPattern[11] = (byte)c03;
+
+                CustomPattern[12] = (byte)d00;
+                CustomPattern[13] = (byte)d01;
+                CustomPattern[14] = (byte)d02;
+                CustomPattern[15] = (byte)d03;
+
+                CustomPattern[16] = (byte)e00;
+                CustomPattern[17] = (byte)e01;
+                CustomPattern[18] = (byte)e02;
+                CustomPattern[19] = (byte)e03;
+
+                CustomPattern[20] = (byte)f00;
+                CustomPattern[21] = (byte)f01;
+                CustomPattern[22] = (byte)f02;
+                CustomPattern[23] = (byte)f03;
+
+                CustomPattern[24] = (byte)g00;
+                CustomPattern[25] = (byte)g01;
+                CustomPattern[26] = (byte)g02;
+                CustomPattern[27] = (byte)g03;
+
+                CustomPattern[28] = (byte)h00;
+                CustomPattern[29] = (byte)h01;
+                CustomPattern[30] = (byte)h02;
+                CustomPattern[31] = (byte)h03;
+
+                CustomPattern[32] = (byte)i00;
+                CustomPattern[33] = (byte)i01;
+                CustomPattern[34] = (byte)i02;
+                CustomPattern[35] = (byte)i03;
+
+                CustomPattern[36] = (byte)j00;
+                CustomPattern[37] = (byte)j01;
+                CustomPattern[38] = (byte)j02;
+                CustomPattern[39] = (byte)j03;
+
+                CustomPattern[40] = (byte)k00;
+                CustomPattern[41] = (byte)k01;
+                CustomPattern[42] = (byte)k02;
+                CustomPattern[43] = (byte)k03;
+
+                CustomPattern[44] = (byte)l00;
+                CustomPattern[45] = (byte)l01;
+                CustomPattern[46] = (byte)l02;
+                CustomPattern[47] = (byte)l03;
+
+                Toast.makeText(CustomActivity.this, "系统处理中...", Toast.LENGTH_LONG).show();
                 BlueAction blueAction= new BlueAction();
                 blueAction.SendCustomPattern(CustomPattern);
             }
