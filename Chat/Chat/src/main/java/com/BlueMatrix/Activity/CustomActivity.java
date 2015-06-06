@@ -10,7 +10,28 @@ import android.widget.CheckBox;
 import android.widget.Toast;
 import android.app.Activity;
 
+import com.BlueMatrix.ble.BlueAction;
+
 public class CustomActivity extends Activity {
+    private byte CustomPattern[]={
+            0x0,0x0,0x0,0x0,                //µÚÒ»ÐÐ
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0,
+            0x0,0x0,0x0,0x0
+    };
+
 
     private CheckBox chBoxA1,chBoxA2,chBoxA3,chBoxA4,chBoxA5,chBoxA6,chBoxA7,chBoxA8,chBoxA9,chBoxA10,
             chBoxA11,chBoxA12,chBoxA13,chBoxA14,
@@ -1089,7 +1110,8 @@ public class CustomActivity extends Activity {
                 String a = Integer.toHexString(a00+a01);
                 //Toast.makeText(CustomActivity.this, checkVaule, Toast.LENGTH_LONG).show();
                 Toast.makeText(CustomActivity.this, a, Toast.LENGTH_LONG).show();
-
+                BlueAction blueAction= new BlueAction();
+                blueAction.SendCustomPattern(CustomPattern);
             }
         });
 
